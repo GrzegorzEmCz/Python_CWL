@@ -1,13 +1,15 @@
 import os
-import action
+
 from past.builtins import raw_input
 
+import action
 
-def admin_menu():
+
+def admin_menu():  # to nie jest dobra implementacja menu
     ch = "Y"
     while ch == "Y":
         print("\n \t \t \t ADMINISTRATION MENU \t \t \t \n")
-        print("\t 1. CREATE READER")
+        print("\t 1. CREATE READER")  # miłego poprawiania numeracji, jak się coś zmieni
         print("\t 2. DISPLAY ALL READERS")
         print("\t 3. DISPLAY SPECIFIC READER")
         print("\t 4. MODIFY READER")
@@ -68,9 +70,9 @@ def main_menu():
         elif ch1 == 2:
             action.book_deposit()
         elif ch1 == 3:
-            admin_menu()
+            admin_menu()  # a jakaś kontola, czy to jest admin?
         else:
-            exit(0)
+            exit(0)  # ??
 
         ch = raw_input("\n \t \t \t Do You Want to Continue <y/n>:")
         ch = ch.upper()

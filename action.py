@@ -1,15 +1,18 @@
-from pickle import load, dump
-import models
-from os import remove, rename
-from past.builtins import raw_input
 import os
+from os import remove, rename
+from pickle import load, dump
+
+from past.builtins import raw_input
+
+import models
 
 book = models.Book()
 student = models.Reader()
 
+
 def write_book():
     ch = "Y"
-    fp = open("book.dat", "ab")
+    fp = open("book.dat", "ab")  # a kto zamknie?
     while ch == "Y":
         book.add()
         dump(book, fp)
@@ -39,7 +42,7 @@ def display_all_readers():
                 st = load(fin)
                 st.show()
         except EOFError:
-            pass
+            pass  # wymaga komentarza
         fin.close()
 
 
@@ -50,7 +53,7 @@ def display_all_books():
     else:
         try:
             while True:
-                bk = load(fin)
+                bk = load(fin)  # bk?
                 bk.show()
         except EOFError:
             pass
@@ -58,7 +61,7 @@ def display_all_books():
 
 
 def display_reader_book_id(no):
-    flag = 0
+    flag = 0  # False? nazwa zmiennej
     fin = open("book.dat", "rb")
     try:
         while True:
@@ -74,7 +77,7 @@ def display_reader_book_id(no):
         print("\n \t \t \t \t BOOK NOT PRESENT..!!")
 
 
-def display_sps(n):
+def display_sps(n):  # sps?
     flag = 0
     fin = open("reader.dat", "rb")
     try:
