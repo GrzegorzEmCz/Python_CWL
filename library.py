@@ -1,8 +1,9 @@
-import models
-import view
-from past.builtins import raw_input
 import os
 
+from past.builtins import raw_input
+
+import models
+import view
 
 print("\n \t \t \t WELCOME TO MAGIC LIBRARY \t \t \t \n \n")
 print("\t \t \t \t \t \t \t PROJECT DONE BY:")

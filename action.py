@@ -1,11 +1,14 @@
-from pickle import load, dump
-import models
-from os import remove, rename
-from past.builtins import raw_input
 import os
+from os import remove, rename
+from pickle import load, dump
+
+from past.builtins import raw_input
+
+import models
 
 book = models.Book()
 student = models.Reader()
+
 
 def write_book():
     ch = "Y"

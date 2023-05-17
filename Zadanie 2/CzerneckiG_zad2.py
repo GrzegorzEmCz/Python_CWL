@@ -1,8 +1,9 @@
 from collections import Counter
 
+
 def count_words(file_path, n):
     with open(file_path, 'r') as file:
-        content = file.read()
+        content = file.read()  # zły pomysł; proszę to zrobić z Wikipedią
 
     words = content.split()
     word_counts = Counter(words)
@@ -25,8 +26,9 @@ def count_ngrams(file_path):
 
     words = content.split()
 
-    bigrams = [(words[i], words[i+1]) for i in range(len(words)-1)]
-    trigrams = [(words[i], words[i+1], words[i+2]) for i in range(len(words)-2)]
+    bigrams = [(words[i], words[i + 1]) for i in range(len(words) - 1)]
+    trigrams = [(words[i], words[i + 1], words[i + 2]) for i in
+                range(len(words) - 2)]  # szkoda, że w poleceniu nie było n-gramów od 2 do 10
 
     bigram_counts = Counter(bigrams)
     trigram_counts = Counter(trigrams)
